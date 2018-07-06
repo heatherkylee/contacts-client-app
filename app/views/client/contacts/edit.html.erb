@@ -1,0 +1,12 @@
+<p>Edit an Existing Contact</p>
+
+<%= form_tag "/client/contacts/#{@contact['id']}", method: :patch do %>
+  <p>First Name: <input type="text" name="input_first_name" value="<%= @contact['first_name']%>"></p>
+  <p>Last Name: <input type="text" name="input_last_name" value="<%= @contact['last_name']%>"></p>
+  <p>Phone Number: <input type="text" name="input_phone_number" value="<%= @contact['phone_number']%>"></p>
+  <p>Email: <input type="text" name="input_email" value="<%= @contact['email']%>">
+  <p><input type="submit" value="Update Contact"></p>
+<% end %>
+
+<p>Click below to delete contact</p>
+<a href="/client/contacts/<%= @contact['id'] %>" data-method="delete">Remove Contact</a>

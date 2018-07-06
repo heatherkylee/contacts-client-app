@@ -1,0 +1,8 @@
+<a href="http://localhost:3001/client/contacts/new">Add a New Contact</a>
+<% @contacts.each do |contact| %>
+  <p>id: <a href="http://localhost:3001/client/contacts/<%= contact['id'] %>"><%= contact['id'] %></a>
+  <p>First Name: <%= contact['first_name'] %>
+  <p>Last Name: <%= contact['last_name'] %>
+  <p>Phone Number: <%= contact['phone_number'] %>
+  <p>Email: <%= contact['email'] %>
+<% end %>
