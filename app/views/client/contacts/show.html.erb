@@ -1,6 +1,8 @@
 <p>Detailed Contact Information</p>
 <p>First Name: <%= @contact['first_name'] %></p>
 <p>Last Name: <%= @contact['last_name'] %></p>
+<p>Full Name: <%= @contact['formatted']['full_name'] %></p>
 <p>Phone Number: <%= @contact['phone_number'] %></p>
 <p>Email: <%= @contact['email'] %></p>
+<p>Last Updated: <%= @contact['formatted']['month_day_year'] %></p>
 <a href="http://localhost:3001/client/contacts/<%= @contact['id'] %>/edit">Edit Contact</a>
