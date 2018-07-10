@@ -1,10 +1,12 @@
 <a href="http://localhost:3001/client/contacts/new">Add a New Contact</a>
 <% @contacts.each do |contact| %>
   <p>id: <a href="http://localhost:3001/client/contacts/<%= contact['id'] %>"><%= contact['id'] %></a>
-  <p>First Name: <%= contact['first_name'] %>
-  <p>Last Name: <%= contact['last_name'] %>
-  <p>Full Name: <%= contact['full_name'] %></p>
-  <p>Phone Number: <%= contact['phone_number'] %>
-  <p>Email: <%= contact['email'] %>
+  <p>First Name: <%= contact['first_name'] %></p>
+  <p>Middle Name: <%= contact['middle_name'] %></p>
+  <p>Last Name: <%= contact['last_name'] %></p>
+  <p>Full Name: <%= contact['formatted']['full_name'] %></p>
+  <p>Phone Number: <%= contact['phone_number'] %></p>
+  <p>Email: <%= contact['email'] %></p>
+  <p>Bio: <%= contact['bio'] %></p>
   <p>Last Updated: <%= contact['updated_at'] %></p>
 <% end %>

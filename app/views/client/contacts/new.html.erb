@@ -2,8 +2,10 @@ Create a new contact here
 
 <%= form_tag "/client/contacts", method: :post do %>
   <p>First Name: <input type="text" name="input_first_name"></p>
+  <p>Middle Name: <input type="text" name="input_middle_name"></p>
   <p>Last Name: <input type="text" name="input_last_name"></p>
   <p>Phone Number: <input type="text" name="input_phone_number"></p>
   <p>Email: <input type="text" name="input_email">
+  <p>Bio: <input type="text" name="input_bio"></p>
   <p><input type="submit" value="Create new contact"></p>
 <% end %>
