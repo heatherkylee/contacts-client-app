@@ -11,6 +11,10 @@
 
   <body>
     <a href="http://localhost:3001/client/contacts">View All Contacts</a>
+    <a href="/client/signup">Sign Up</a>
+    <a href="/client/login">Log In</a>
+    <a href="/client/logout" data-method="delete">Log Out</a>
+    <%= @jwt %>
     <%= yield %>
   </body>
 </html>
