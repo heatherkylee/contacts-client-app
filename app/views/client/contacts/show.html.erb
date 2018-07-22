@@ -6,5 +6,9 @@
 <p>Phone Number: <%= @contact['phone_number'] %></p>
 <p>Email: <%= @contact['email'] %></p>
 <p>Bio: <%= @contact['bio'] %></p>
+<p>Groups: 
+  <% @contact["group"].each do |group| %>
+    <%= group['group_type'] %></p>
+  <% end %>
 <p>Last Updated: <%= @contact['formatted']['month_day_year'] %></p>
 <a href="http://localhost:3001/client/contacts/<%= @contact['id'] %>/edit">Edit Contact</a>
